@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Sign Up
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <form #emailSignupForm="ngForm" (ngSubmit)="submitEmailSignupForm()" class="transparent"  novalidate>
+    <ion-list class="transparent" ngControlGroup="signUpData">
+      <ion-item class="transparent">
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" name="username" ngControl="username" [(ngModel)]="userSignUp.username"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" class="transparent" name="email" ngControl="email" [(ngModel)]="userSignUp.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" class="transparent" name="password" ngControl="password" [(ngModel)]="userSignUp.password"></ion-input>
+      </ion-item>
+      <ion-item class="transparent">
+        <div class="centered">
+          <button ion-button block danger type="submit">
+            Sign up
+          </button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </form>
+</ion-content>

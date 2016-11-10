@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+        Sign in
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <form #emailSigninForm="ngForm" (ngSubmit)="submitEmailSigninForm()" class="transparent" novalidate>
+    <ion-list class="transparent" ngControlGroup="signInData">
+
+      <ion-item class="transparent">
+        <ion-label floating>Email</ion-label>
+        <ion-input type="email" class="transparent" name="email" ngControl="email" [(ngModel)]="userSignIn.email"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" class="transparent" name="password" ngControl="password" [(ngModel)]="userSignIn.password"></ion-input>
+      </ion-item>
+
+      <ion-item class="transparent white-placeholder">
+        <div class="centered">
+              <button full ion-button danger type="submit">
+                Sign in
+              </button>
+        </div>
+      </ion-item>
+    </ion-list>
+  </form>
+
+
+</ion-content>
